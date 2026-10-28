@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "soc2start": {
+      "url": "https://REPLACE_WITH_SOC2START_MCP_URL",
+      "bearer_token_env_var": "SOC2START_API_TOKEN"
+    }
+  }
+}

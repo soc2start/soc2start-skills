@@ -1,0 +1,26 @@
+{
+  "name": "soc2start",
+  "version": "0.1.0",
+  "description": "Connects Gemini CLI to your SOC2Start.io workspace and guides onboarding: company context, gap analysis, measures, policies, vendors, risks, tasks and audit readiness.",
+  "settings": [
+    {
+      "name": "SOC2Start MCP URL",
+      "description": "The MCP endpoint for your SOC2Start workspace",
+      "envVar": "SOC2START_MCP_URL"
+    },
+    {
+      "name": "SOC2Start API token",
+      "description": "API token for your SOC2Start user. Stored in your system keychain.",
+      "envVar": "SOC2START_API_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "soc2start": {
+      "httpUrl": "${SOC2START_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${SOC2START_API_TOKEN}"
+      }
+    }
+  }
+}
